@@ -119,7 +119,7 @@ export class Spinner {
     await this.printNewLine();
   }
 
-  public async success(text?: string) {
+  public async succeed(text?: string) {
     await this.stopSpinnerWithStatus(bold(green('√')), text);
   }
 

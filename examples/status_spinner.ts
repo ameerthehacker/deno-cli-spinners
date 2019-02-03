@@ -15,7 +15,7 @@ setTimeout(async () => {
     spinner.start('Updating cache...');
 
     setTimeout(async () => {
-      await spinner.success();
+      await spinner.succeed();
     }, 2000);
   }, 2000);
 }, 2000);
