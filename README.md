@@ -1,4 +1,4 @@
-# Deno CLI Spinners
+# CLI Spinners for Deno
 
 > Awesome deno terminal spinners
 
@@ -7,7 +7,7 @@
 ## Usage
 
 ```typescript
-import Spinner from 'https://raw.githubusercontent.com/ameerthehacker/deno-cli-spinners/master/mod.ts';
+import Spinner from 'https://raw.githubusercontent.com/ameerthehacker/cli-spinners/master/mod.ts';
 
 const spinner = Spinner.getInstance();
 
