@@ -27,13 +27,13 @@ Spinner.getInstance();
 This will return a singleton instance for the `Spinner` class.
 
 ```typescript
-await Spinner.start(text: string);
+await spinner.start(text: string);
 ```
 
 This will start a spinner with the given text.
 
 ```typescript
-await Spinner.stop();
+await spinner.stop();
 ```
 
 This will stop the spinner and clears the line.
