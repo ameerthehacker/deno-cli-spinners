@@ -4,7 +4,7 @@
 
 ![example screenshot](https://i.imgur.com/RBsL1k9.gif)
 
-This package is inspired from [ora](https://github.com/sindresorhus/ora) and [cli-spinners](https://github.com/sindresorhus/cli-spinners) 
+> This package is inspired from [ora](https://github.com/sindresorhus/ora) and [cli-spinners](https://github.com/sindresorhus/cli-spinners) 
 
 ## Usage
 
