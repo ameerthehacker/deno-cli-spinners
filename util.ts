@@ -1,10 +1,8 @@
-import * as deno from 'deno';
-
 export const clearCurrentLine = async (
   textEncoder: TextEncoder,
   cols: number
 ) => {
-  await deno.stdout.write(textEncoder.encode(`\x1b[${cols}D \x1b[K`));
+  await Deno.stdout.write(textEncoder.encode(`\x1b[${cols}D \x1b[K`));
 };
 
 export const printOnCurrentLine = async (
@@ -12,12 +10,12 @@ export const printOnCurrentLine = async (
   cols: number,
   message: string
 ) => {
-  await deno.stdout.write(
+  await Deno.stdout.write(
     textEncoder.encode(`\x1b[${cols}D \x1b[K ${message}`)
   );
 };
 
 export const printNewLine = async (textEncoder: TextEncoder, cols: number) => {
-  await deno.stdout.write(textEncoder.encode(`\x1b[${cols}D`));
-  await deno.stdout.write(textEncoder.encode(`\x1b[1B`));
+  await Deno.stdout.write(textEncoder.encode(`\x1b[${cols}D`));
+  await Deno.stdout.write(textEncoder.encode(`\x1b[1B`));
 };

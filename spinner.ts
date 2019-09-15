@@ -5,7 +5,7 @@ import {
   green,
   bold,
   yellow
-} from 'https://deno.land/x/std/colors/mod.ts';
+} from 'https://deno.land/std/fmt/colors.ts';
 
 export class Spinner {
   private static instance: Spinner;
