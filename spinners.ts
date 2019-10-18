@@ -1,4 +1,4 @@
-export const SPINNERS: object = {
+export const SPINNERS = {
 	"dots": {
 		"interval": 80,
 		"frames": [
@@ -910,3 +910,5 @@ export const SPINNERS: object = {
 		]
 	}
 }
+
+export type SpinnerType = keyof typeof SPINNERS;
