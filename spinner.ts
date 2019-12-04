@@ -1,11 +1,6 @@
-import { SPINNERS } from './spinners.ts';
+import { SPINNERS, SpinnerType } from './spinners.ts';
 import { clearCurrentLine, printOnCurrentLine, printNewLine } from './util.ts';
-import {
-  red,
-  green,
-  bold,
-  yellow
-} from 'https://deno.land/std/fmt/colors.ts';
+import { red, green, bold, yellow } from 'https://deno.land/std/fmt/colors.ts';
 
 export class Spinner {
   private static instance: Spinner;
@@ -14,7 +9,7 @@ export class Spinner {
   private spinner: any;
   private cols: number;
   private textEncoder: TextEncoder;
-  private spinnerType: string;
+  private spinnerType: SpinnerType
 
   private constructor() {
     this.spinnerType = 'dots2';
@@ -32,7 +27,7 @@ export class Spinner {
     }
   }
 
-  public setSpinnerType(type: string) {
+  public setSpinnerType(type: SpinnerType) {
     if (SPINNERS[type]) {
       this.spinner = SPINNERS[type];
     } else {
