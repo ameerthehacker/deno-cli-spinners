@@ -5,7 +5,7 @@ import { red, green, bold, yellow } from 'https://deno.land/std/fmt/colors.ts';
 export class Spinner {
   private static instance: Spinner;
   private currentText: string;
-  private currentTimer: number;
+  private currentTimer: number | null;
   private spinner: any;
   private cols: number;
   private textEncoder: TextEncoder;
@@ -17,6 +17,7 @@ export class Spinner {
     this.cols = 0;
     this.textEncoder = new TextEncoder();
     this.currentTimer = null;
+    this.currentText = '';
   }
 
   public static getInstance() {
@@ -72,7 +73,9 @@ export class Spinner {
   }
 
   private async stopSpinner(text?: string) {
-    clearInterval(this.currentTimer);
+    if (this.currentTimer) {
+      clearInterval(this.currentTimer);
+    }
 
     if (text) {
       await this.print(text);
