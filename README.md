@@ -9,7 +9,7 @@
 ## Usage
 
 ```typescript
-import Spinner from 'https://raw.githubusercontent.com/ameerthehacker/cli-spinners/master/mod.ts';
+import Spinner from 'https://deno.land/x/cli_spinners@v0.0.1/mod.ts';
 
 const spinner = Spinner.getInstance();
 
