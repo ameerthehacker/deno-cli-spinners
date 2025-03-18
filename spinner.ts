@@ -1,6 +1,6 @@
 import { SPINNERS, SpinnerType } from './spinners.ts';
-import { clearCurrentLine, printOnCurrentLine, printNewLine } from './util.ts';
-import { red, green, bold, yellow } from 'https://deno.land/std/fmt/colors.ts';
+import { bold, green, red, yellow } from 'https://deno.land/std/fmt/colors.ts';
+import { clearCurrentLine, printNewLine, printOnCurrentLine } from './util.ts';
 
 export class Spinner {
   private static instance: Spinner;
@@ -36,7 +36,7 @@ export class Spinner {
     }
   }
 
-  public async start(text: string) {
+  public async start(text = "     ") {
     if (this.isRunning()) {
       throw new Error(
         "Can't start a new spinner while a spinner is already running!"
